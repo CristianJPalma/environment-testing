@@ -1,0 +1,16 @@
+- changeSet:
+    id: 001_tables
+    author: cristianspalmas@gmail.com
+    context: tables
+    labels: HU_02
+    comment:  Descriptions
+    changes:
+    - tagDatabase:
+        tag: v1.0.1
+    - sqlFile:
+        path: 001_tb_customers.sql
+        endDelimiter: ";"
+        strpComments: false
+        rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/001_tb_customers.sql
